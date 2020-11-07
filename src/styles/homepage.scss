@@ -1,0 +1,101 @@
+@import "./components/main.scss";
+@import "./components/sidebar.scss";
+@import "./components/topics.scss";
+@import "./components/header.scss";
+@import "./components/videolist.scss";
+@import "./components/navicons.scss";
+
+body {
+  background-color: #f9f9f9;
+
+  @media (max-width: 1000px) {
+    .sidebar {
+      display: none;
+    }
+
+    .videocard {
+      width: 100vw;
+
+    }
+  }
+
+  @media (max-width: 850px) {
+    #searchbar {
+      display: none;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .video {
+      width: 650px;
+    }
+
+    .headerMini {
+      .searchbar {
+        width: 50%;
+        margin-right: 5px;
+      }
+    }
+
+    .menu {
+      width: 80px;
+    }
+
+    #youtube,
+    #menu,
+    #iconsx {
+      display: none;
+    }
+
+  }
+
+  @media (min-width: 1000px) {
+    .arrow {
+      display: none;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .videocard {
+      padding-left: 10px;
+    }
+
+    .video {
+      width: 200px;
+    }
+  }
+
+  @media (max-width: 1500px) {
+
+    .videocard {
+      width: 100%;
+    }
+
+    .video {
+      width: 250px;
+      margin-left: 0px;
+    }
+  }
+
+  @media (min-width: 850px) {
+    #absolute {
+      display: none;
+    }
+
+    .searchIcon {
+      display: none;
+    }
+
+    .headerMini {
+      #searchbar {
+        flex: 40%;
+      }
+    }
+  }
+}
+
+
+.body {
+  display: flex;
+  flex-direction: row;
+}

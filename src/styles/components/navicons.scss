@@ -1,0 +1,11 @@
+.navicon {
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    &:hover {
+        background-color: #f2f2f2;
+    }
+}

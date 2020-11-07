@@ -1,0 +1,144 @@
+$height: 40px;
+
+@mixin focus {
+    outline: none !important;
+    border: 1px solid #0d5eb4;
+    box-shadow: 0 0 2px #0d5eb4;
+}
+
+@mixin searchbar {
+    @include flex();
+    background-color: #f8f8f8;
+    height: 40px;
+    background-color: #f8f8f8;
+    border-right: 1px solid #ccc;
+    border-left: none;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+
+}
+
+@mixin input {
+    height: 100%;
+    box-sizing: border-box;
+    padding-left: 10px;
+    font-size: 0.94em;
+    border-right: none;
+    border-top: none;
+}
+
+@mixin flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.youtube {
+    flex: 20%;
+    cursor: pointer;
+
+    img {
+        height: 25px;
+        width: 120px;
+    }
+}
+
+.menu {
+    width: 110px;
+    text-align: center;
+    color: #606060;
+    cursor: pointer;
+}
+
+.headerContainer {
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid #e0e0e0;
+
+}
+
+.header {
+    @include flex();
+    height: 70px;
+    flex: 35%;
+    border: 1px solid #f9f9f9;
+    padding: 0px;
+    margin: 0px;
+    background: white;
+
+    .arrow {
+        padding-left: 25px;
+        padding-right: 15px;
+        font-size: 1.3em;
+        cursor: pointer;
+    }
+
+    .searchbar {
+        width: 300px;
+        @include searchbar();
+
+        .inputcontainer {
+            height: 40px;
+
+            #input {
+                @include input();
+                border-left: 1px solid #ccc;
+                border-bottom: none;
+
+                &:focus {
+                    @include focus();
+                }
+            }
+        }
+
+
+    }
+
+}
+
+.searchbar {
+    flex: 40%;
+    @include searchbar();
+
+    .inputcontainer {
+        height: 40px;
+        width: 100%;
+
+        #input {
+            width: 100%;
+            @include input();
+            border-left: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+
+            &:focus {
+                @include focus();
+            }
+        }
+    }
+
+    .faSearch {
+        width: 120px;
+        text-align: center;
+        height: 40px;
+        border-left: 1px solid #ccc;
+
+        &:hover {
+            background-color: #f2f2f2;
+            cursor: pointer;
+        }
+    }
+}
+
+.icons {
+    flex: 25%;
+    @include flex();
+    height: $height;
+    justify-content: flex-end;
+
+    #icons,
+    .searchIcon {
+        background-color: white;
+        padding-right: 20px;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,49 @@
+.videolist {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 85vw;
+    padding-top: 40px;
+    margin-left: 5%;
+    justify-content: space-evenly;
+}
+
+.video {
+    width: 250px;
+    margin-right: 15px;
+    height: 350px;
+    align-self: center;
+
+    .details {
+        display: flex;
+        flex-direction: row;
+        font-size: "1.2rem";
+        margin-top: 5px;
+
+        img {
+            margin-top: 5px;
+            border-radius: 50%;
+        }
+
+        .text {
+            margin-left: 5px;
+            width: 100%;
+            color: #606060;
+            font-weight: bold;
+            margin-top: 10px;
+            margin-bottom: 10px;
+
+            .title {
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+            }
+        }
+
+        h3,
+        p {
+            margin-top: 5px;
+        }
+    }
+}
